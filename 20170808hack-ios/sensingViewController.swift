@@ -8,8 +8,18 @@
 
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import Alamofire
+import SwiftyJSON
 
 class sensingViewController: UIViewController{
+    
+    
+    fileprivate let url = "http://192.168.179.7:4035/gotapi/health/heartrate?serviceId=E9%3A72%3AA6%3A7D%3A87%3A3B.e9484eb5107adfef1af6a0dc65c03232.localhost.deviceconnect.org"
+    var timer: Timer!
+    var databaseRef:DatabaseReference!
+    var postArray = [String: Any]()
     
 
     var myData :UILabel!
@@ -69,42 +79,12 @@ class sensingViewController: UIViewController{
         yourData.textAlignment = NSTextAlignment.left
         yourData.textColor = UIColor.black
         self.view.addSubview(yourData!)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    var databaseRef:DatabaseReference!
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet weak var pulseLabel: UILabel!
-    
-    fileprivate let url = "http://192.168.179.7:4035/gotapi/health/heartrate?serviceId=E9%3A72%3AA6%3A7D%3A87%3A3B.e9484eb5107adfef1af6a0dc65c03232.localhost.deviceconnect.org"
-    var timer: Timer!
-    
-    var postArray = [String: Any]()
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        if true {
-            label.text = "ユーザー1"
-            nameTextField.text = "ユーザー2"
-        } else {
-            label.text = "ユーザー2"
-            nameTextField.text = "ユーザー1"
-        }
+        
+        //firebase
         databaseRef = Database.database().reference()
-        self.messageTextField.delegate = self
-        
-        
         //情報を取得したいユーザーの更新を取得する
-        databaseRef.child("user/"+self.nameTextField.text!).observe(.value, with: { snapshot in
+        databaseRef.child("user/"+"ユーザー1").observe(.value, with: { snapshot in
             if let snapshotValue = snapshot.value as? [String:Any],
                 let name = snapshotValue["uid"] as? String,
                 let pulse = snapshotValue["pulse"] as? String {
@@ -114,8 +94,13 @@ class sensingViewController: UIViewController{
             }
         })
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateHeartRate), userInfo: nil, repeats: true)
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     
     func updateHeartRate() {
         Alamofire.request(url, method: .get)
@@ -123,14 +108,8 @@ class sensingViewController: UIViewController{
                 
                 switch response.result {
                 case .success(let value):
-                    //json形式取得
                     let json = JSON(value)
-                    //タイムスタンプ
-                    let format = DateFormatter()
-                    format.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-                    let strDate = format.string(from: Date())
-                    
-                    let data: [String : Any] = ["uid": self.label.text!,"time": strDate, "latitude":  100, "longitude": 100, "pulse": json["heartRate"].stringValue] as [String : Any]
+                    let data = self.getParamData(json)
                     let root = "user/"+(data["uid"] as! String)
                     print(data)
                     self.databaseRef.child(root).setValue(data)
@@ -141,6 +120,18 @@ class sensingViewController: UIViewController{
                 }
             }
         )
+    }
+    
+    func getParamData(_ json: JSON) -> [String : Any] {
+        //タイムスタンプ
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd-HH-mm-ss"
+        let strDate = format.string(from: Date())
+        
+        let data: [String : Any] = ["uid": "ユーザー1","time": strDate, "latitude":  100, "longitude": 100, "pulse": json["heartRate"].stringValue] as [String : Any]
+        
+        return data
+
     }
     
     func post(_ data: [String : Any]) {
