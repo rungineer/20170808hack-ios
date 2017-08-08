@@ -11,7 +11,7 @@ import UIKit
 class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
     // サムネイル画像のタイトル
-    let photos = ["rittu","rittu","1","1","1","1","1","1","1","1"]
+    let photos = ["rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg"]
 
     let cellMargin: CGFloat = 1.0
     var selectedImage: UIImage?
