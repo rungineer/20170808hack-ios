@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
         passTextField.delegate = self
         userIDTextField.delegate = self
+        userIDTextField.text = "hogehoge"
+        passTextField.text = "hogehoge"
+        passTextField.isSecureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
