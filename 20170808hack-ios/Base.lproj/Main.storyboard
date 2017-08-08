@@ -323,39 +323,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-ed-Jek">
-                                <rect key="frame" x="0.0" y="-6" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="-6" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="oZn-lm-5uG"/>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9y1-Eq-F2Q">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9y1-Eq-F2Q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="l4n-rR-egc"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9x-vG-Qac">
+                                <rect key="frame" x="52" y="323" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uar-Wz-CeC">
                                 <rect key="frame" x="13" y="88" width="349" height="205"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="205" id="2uw-fB-ifO"/>
+                                    <constraint firstAttribute="height" constant="205" id="Ajz-LU-9Nf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uar-Wz-CeC" firstAttribute="centerX" secondItem="JbW-u0-eMk" secondAttribute="centerX" id="2c1-Va-dhd"/>
-                            <constraint firstItem="uar-Wz-CeC" firstAttribute="leading" secondItem="JbW-u0-eMk" secondAttribute="leadingMargin" constant="-3" id="Jtx-OX-aWH"/>
-                            <constraint firstItem="DbD-Xi-wzM" firstAttribute="top" secondItem="uar-Wz-CeC" secondAttribute="bottom" constant="325" id="Oxp-Ie-YWK"/>
+                            <constraint firstItem="9y1-Eq-F2Q" firstAttribute="top" secondItem="JbW-u0-eMk" secondAttribute="top" id="EYY-Yn-1oO"/>
+                            <constraint firstItem="l9x-vG-Qac" firstAttribute="top" secondItem="uar-Wz-CeC" secondAttribute="bottom" constant="30" id="F3P-vk-JqS"/>
+                            <constraint firstItem="uar-Wz-CeC" firstAttribute="top" secondItem="GdY-8j-H41" secondAttribute="bottom" constant="24" id="Utd-w1-uqg"/>
+                            <constraint firstItem="uar-Wz-CeC" firstAttribute="leading" secondItem="JbW-u0-eMk" secondAttribute="leadingMargin" constant="-3" id="VOS-no-L5O"/>
+                            <constraint firstItem="l9x-vG-Qac" firstAttribute="leading" secondItem="JbW-u0-eMk" secondAttribute="leadingMargin" constant="36" id="ZoA-h7-DDU"/>
                             <constraint firstItem="OGy-ed-Jek" firstAttribute="leading" secondItem="JbW-u0-eMk" secondAttribute="leading" id="aBE-D4-Uwe"/>
+                            <constraint firstItem="l9x-vG-Qac" firstAttribute="centerY" secondItem="JbW-u0-eMk" secondAttribute="centerY" id="aN9-ts-SMd"/>
+                            <constraint firstItem="l9x-vG-Qac" firstAttribute="centerX" secondItem="9y1-Eq-F2Q" secondAttribute="centerX" id="b3L-9w-qzM"/>
+                            <constraint firstItem="9y1-Eq-F2Q" firstAttribute="leading" secondItem="OGy-ed-Jek" secondAttribute="leading" id="dSr-4m-on3"/>
+                            <constraint firstItem="uar-Wz-CeC" firstAttribute="centerX" secondItem="OGy-ed-Jek" secondAttribute="centerX" id="fy2-ET-CSG"/>
+                            <constraint firstItem="uar-Wz-CeC" firstAttribute="centerX" secondItem="JbW-u0-eMk" secondAttribute="centerX" id="j4z-NY-fHU"/>
                             <constraint firstItem="OGy-ed-Jek" firstAttribute="top" secondItem="JbW-u0-eMk" secondAttribute="topMargin" constant="-6" id="j6k-x4-nLh"/>
-                            <constraint firstItem="uar-Wz-CeC" firstAttribute="top" secondItem="OGy-ed-Jek" secondAttribute="bottom" constant="93" id="msK-r2-zM0"/>
-                            <constraint firstItem="OGy-ed-Jek" firstAttribute="centerX" secondItem="uar-Wz-CeC" secondAttribute="centerX" id="wfo-Fd-uHv"/>
+                            <constraint firstItem="uar-Wz-CeC" firstAttribute="centerX" secondItem="9y1-Eq-F2Q" secondAttribute="centerX" id="xHl-R7-EeN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DCF-i3-bz3"/>
                     <connections>
                         <outlet property="imageView" destination="uar-Wz-CeC" id="hal-Lk-otS"/>
+                        <outlet property="textView" destination="l9x-vG-Qac" id="xSu-dj-0yA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIc-AT-Hza" userLabel="First Responder" sceneMemberID="firstResponder"/>

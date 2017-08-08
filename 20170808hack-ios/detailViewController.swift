@@ -11,6 +11,7 @@ import UIKit
 class detailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textView: UILabel!
     
     //最初からあるメソッド
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class detailViewController: UIViewController {
 //        self.navigationItem.leftBarButtonItems = [leftButton1]
         
         imageView.image = selectedImage
+        textView.text = selectedText!
     }
     
     

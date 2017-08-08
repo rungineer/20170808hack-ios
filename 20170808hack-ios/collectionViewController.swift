@@ -9,6 +9,7 @@
 import UIKit
 
 var selectedImage: UIImage?
+var selectedText: String?
 
 class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -36,6 +37,7 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
         // Tag番号を使ってLabelのインスタンス生成
         let label = testCell.contentView.viewWithTag(2) as! UILabel
         label.text = photos[(indexPath as NSIndexPath).row]
+        label.text = label.text?.replacingOccurrences(of: ".jpg", with: "")
         return testCell
     }
     
@@ -57,10 +59,15 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
         
         // [indexPath.row] から画像名を探し、UImage を設定
         selectedImage = UIImage(named: photos[(indexPath as NSIndexPath).row])
-//        if selectedImage != nil {
-//            // SubViewController へ遷移するために Segue を呼び出す
+        print(photos[(indexPath as NSIndexPath).row])
+
+        if selectedImage != nil {
+            // SubViewController へ遷移するために Segue を呼び出す
 //            performSegue(withIdentifier: "toSubViewController",sender: nil)
-//        }
+//            print(selectedText?.text)
+            selectedText = photos[(indexPath as NSIndexPath).row]
+            selectedText = selectedText?.replacingOccurrences(of: ".jpg", with: "")
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -83,6 +90,4 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
