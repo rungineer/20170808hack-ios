@@ -25,6 +25,7 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
         
         uisearchBar.placeholder = "検索キーワードを入力してください"
         uisearchBar.delegate = self
+        uisearchBar.showsCancelButton = true
         self.view.addSubview(uisearchBar)
     }
     
@@ -90,11 +91,14 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return cellMargin
     }
-        
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.uisearchBar.endEditing(true)
     }
-
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.uisearchBar.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
