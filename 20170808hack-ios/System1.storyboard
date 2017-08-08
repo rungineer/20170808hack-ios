@@ -222,11 +222,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTc-Oe-aKg">
-                                <rect key="frame" x="80" y="498" width="214" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="button.png"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:10.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzR-yT-iBe">
                                 <rect key="frame" x="57" y="231" width="261" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -241,13 +236,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLi-7f-tXQ">
+                                <rect key="frame" x="80" y="493" width="214" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="sokutei.png"/>
+                                <connections>
+                                    <segue destination="LLs-If-gEt" kind="show" id="LaO-hq-KUD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="測定画面" id="lIq-Hb-PbK"/>
-                    <connections>
-                        <segue destination="LLs-If-gEt" kind="show" id="mJt-me-kAe"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22a-54-fsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,7 +256,7 @@
         <!--結果-->
         <scene sceneID="KJN-Tb-k59">
             <objects>
-                <viewController id="LLs-If-gEt" sceneMemberID="viewController">
+                <viewController id="LLs-If-gEt" customClass="ResultViewController" customModule="_0170808hack_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B5o-ar-2Jb"/>
                         <viewControllerLayoutGuide type="bottom" id="RyQ-yc-zbx"/>
@@ -276,8 +276,11 @@
                                 <rect key="frame" x="80" y="492" width="214" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="close.png"/>
+                                <connections>
+                                    <action selector="close" destination="LLs-If-gEt" eventType="touchUpInside" id="EiU-JI-bsj"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60拍/分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMM-6z-Z73">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="65拍/分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMM-6z-Z73">
                                 <rect key="frame" x="38" y="205" width="298" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
@@ -356,6 +359,7 @@
         <image name="button.png" width="181" height="40"/>
         <image name="close.png" width="181" height="40"/>
         <image name="setting.png" width="33" height="33"/>
+        <image name="sokutei.png" width="181" height="41"/>
         <image name="tab_icon2.png" width="31" height="31"/>
     </resources>
 </document>
