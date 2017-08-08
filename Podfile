@@ -6,6 +6,7 @@ target '20170808hack-ios' do
   use_frameworks!
 
   # Pods for 20170808hack-ios
+  pod 'SwiftCharts', '~> 0.6'
 
   target '20170808hack-iosTests' do
     inherit! :search_paths

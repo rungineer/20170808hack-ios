@@ -1,0 +1,6 @@
+framework module Pods_20170808hack_iosTests {
+  umbrella header "Pods-20170808hack-iosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

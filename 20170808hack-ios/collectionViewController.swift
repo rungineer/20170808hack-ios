@@ -11,9 +11,10 @@ import UIKit
 class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
     // サムネイル画像のタイトル
-    let photos = ["1","1","1","1","1","1","1","1","1","1"]
+    let photos = ["rittu","rittu","1","1","1","1","1","1","1","1"]
 
     let cellMargin: CGFloat = 1.0
+    var selectedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,17 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
         let cellSize:CGFloat = self.view.frame.size.width/2-2
         // 正方形で返すためにwidth,heightを同じにする
         return CGSize(width: cellSize, height: cellSize)
+    }
+    
+    // Cell が選択された場合
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // [indexPath.row] から画像名を探し、UImage を設定
+        selectedImage = UIImage(named: photos[(indexPath as NSIndexPath).row])
+        if selectedImage != nil {
+            // SubViewController へ遷移するために Segue を呼び出す
+            performSegue(withIdentifier: "toSubViewController",sender: nil)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
