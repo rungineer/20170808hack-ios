@@ -11,15 +11,21 @@ import UIKit
 var selectedImage: UIImage?
 var selectedText: String?
 
-class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
+class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     
     // サムネイル画像のタイトル
     let photos = ["rittu.jpg","六本木の夜景.jpg","LaQua.jpg","すみだ水族館.jpg","とよしまえん.jpg","上野動物園.jpg","代々木公園.jpg","六本木ヒルズ.jpg","日比谷公園.jpg","東京スカイツリー.jpg", "東京ミッドタウン.jpg", "東京都庁展望室.jpg", "浜離宮恩賜庭園.jpg", "花やしき.jpg", "表参道.jpg"]
 
     let cellMargin: CGFloat = 0
     
+    @IBOutlet weak var uisearchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        uisearchBar.placeholder = "検索キーワードを入力してください"
+        uisearchBar.delegate = self
+        self.view.addSubview(uisearchBar)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
@@ -84,8 +90,11 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return cellMargin
     }
-    
-    
+        
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.uisearchBar.endEditing(true)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

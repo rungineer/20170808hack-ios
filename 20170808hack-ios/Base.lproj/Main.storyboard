@@ -306,6 +306,7 @@
                     <navigationItem key="navigationItem" title="ホットなスポット" id="0br-1t-OVr"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="9ts-1h-li2" id="T1b-wo-WsT"/>
+                        <outlet property="uisearchBar" destination="gDs-og-GoA" id="Sln-pg-b3F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chU-Zr-ZXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
