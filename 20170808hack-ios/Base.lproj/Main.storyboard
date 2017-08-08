@@ -138,6 +138,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="6ee-cO-pS6"/>
+                    <connections>
+                        <outlet property="pulseLabel" destination="X5f-U4-Ydz" id="qqS-Ep-dFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHS-p0-KnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

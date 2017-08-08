@@ -15,7 +15,7 @@ import SwiftyJSON
 
 class sensingViewController: UIViewController{
     
-    
+    @IBOutlet var pulseLabel: UILabel!
     fileprivate let url = "http://192.168.179.7:4035/gotapi/health/heartrate?serviceId=E9%3A72%3AA6%3A7D%3A87%3A3B.e9484eb5107adfef1af6a0dc65c03232.localhost.deviceconnect.org"
     var timer: Timer!
     var databaseRef:DatabaseReference!
@@ -88,7 +88,7 @@ class sensingViewController: UIViewController{
             if let snapshotValue = snapshot.value as? [String:Any],
                 let name = snapshotValue["uid"] as? String,
                 let pulse = snapshotValue["pulse"] as? String {
-                if name == self.nameTextField.text! {
+                if name == "ユーザー1" {
                     self.pulseLabel.text = pulse + "T"
                 }
             }
