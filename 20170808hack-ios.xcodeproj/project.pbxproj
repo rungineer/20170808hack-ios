@@ -339,7 +339,7 @@
 				TargetAttributes = {
 					BF0BD5301F398C23001945C8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = E5RDJ83DDA;
+						DevelopmentTeam = GUK2A2565Q;
 						ProvisioningStyle = Automatic;
 					};
 					BF0BD5441F398C23001945C8 = {
@@ -727,7 +727,7 @@
 			baseConfigurationReference = 4121ABE30F9BE69BE1E443D0 /* Pods-20170808hack-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E5RDJ83DDA;
+				DEVELOPMENT_TEAM = GUK2A2565Q;
 				INFOPLIST_FILE = "20170808hack-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rungineer.-0170808hack-ios";
@@ -741,7 +741,7 @@
 			baseConfigurationReference = 5A0B29DF6778C1E59BD7EEC5 /* Pods-20170808hack-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E5RDJ83DDA;
+				DEVELOPMENT_TEAM = GUK2A2565Q;
 				INFOPLIST_FILE = "20170808hack-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rungineer.-0170808hack-ios";
