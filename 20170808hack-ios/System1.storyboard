@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -165,6 +165,9 @@
                                 <rect key="frame" x="156" y="524" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="スタート"/>
+                                <connections>
+                                    <segue destination="Zie-sK-gC1" kind="show" id="uLN-nS-Dql"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="心拍を30秒間測定して平均を求めるよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQh-JL-wFj">
                                 <rect key="frame" x="39" y="281" width="298" height="21"/>
@@ -177,9 +180,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="測定画面" id="6EP-nB-1uk"/>
-                    <connections>
-                        <segue destination="Zie-sK-gC1" kind="show" id="7ZF-8p-Wck"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQK-lC-7Nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,10 +282,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ipj-sE-Qea">
-                                <rect key="frame" x="111" y="487" width="153" height="98"/>
+                                <rect key="frame" x="137.5" y="472" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ipj-sE-Qea" secondAttribute="height" multiplier="1:1" id="GfP-pu-GVl"/>
+                                    <constraint firstAttribute="height" constant="100" id="q77-hB-3hc"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOw-wl-kXT">
-                                <rect key="frame" x="167" y="609" width="42" height="21"/>
+                                <rect key="frame" x="167" y="596" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -293,17 +297,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ipj-sE-Qea" firstAttribute="leading" secondItem="unE-Sw-01t" secondAttribute="leadingMargin" constant="95" id="Pgd-4w-eGC"/>
-                            <constraint firstItem="FOw-wl-kXT" firstAttribute="top" secondItem="Ipj-sE-Qea" secondAttribute="bottom" constant="24" id="SBj-eP-4ju"/>
-                            <constraint firstItem="Ipj-sE-Qea" firstAttribute="top" secondItem="Vjt-kO-ffq" secondAttribute="bottom" constant="423" id="p2g-SF-hzH"/>
+                            <constraint firstItem="FOw-wl-kXT" firstAttribute="top" secondItem="Ipj-sE-Qea" secondAttribute="bottom" constant="24" id="mRY-mC-cv2"/>
                             <constraint firstItem="FOw-wl-kXT" firstAttribute="centerX" secondItem="unE-Sw-01t" secondAttribute="centerX" id="v1z-8t-Fwn"/>
-                            <constraint firstItem="uTZ-0B-Or0" firstAttribute="top" secondItem="FOw-wl-kXT" secondAttribute="bottom" constant="37" id="vEG-wF-c3Q"/>
+                            <constraint firstItem="uTZ-0B-Or0" firstAttribute="top" secondItem="FOw-wl-kXT" secondAttribute="bottom" constant="50" id="vEG-wF-c3Q"/>
                             <constraint firstItem="Ipj-sE-Qea" firstAttribute="centerX" secondItem="unE-Sw-01t" secondAttribute="centerX" id="yub-2w-EB7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="aWr-ho-Bvi"/>
                     <navigationItem key="navigationItem" title="パートナーの状態" id="qPu-rh-Gfp">
-                        <barButtonItem key="rightBarButtonItem" title="設定" id="mgW-nn-UqH"/>
+                        <barButtonItem key="rightBarButtonItem" title="設定" id="mgW-nn-UqH">
+                            <connections>
+                                <segue destination="Ok6-A7-Ven" kind="show" id="j8Z-nn-MTL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="partnerImage" destination="Ipj-sE-Qea" id="rKU-7l-gui"/>

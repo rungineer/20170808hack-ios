@@ -22,6 +22,8 @@ class sensingViewController: UIViewController{
     var timer: Timer!
     var databaseRef:DatabaseReference!
     var postArray = [String: Any]()
+    let myID = 1
+    let pairID = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,18 +64,18 @@ class sensingViewController: UIViewController{
         self.view.addSubview(pulseLabel!)
         
         //firebase
-//        databaseRef = Database.database().reference()
-//        //情報を取得したいユーザーの更新を取得する
-//        databaseRef.child("user/"+"ユーザー1").observe(.value, with: { snapshot in
-//            if let snapshotValue = snapshot.value as? [String:Any],
-//                let name = snapshotValue["uid"] as? String,
-//                let pulse = snapshotValue["pulse"] as? String {
-//                if name == "ユーザー1" {
-//                    self.pulseLabel.text = pulse + "T"
-//                }
-//            }
-//        })
-//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateHeartRate), userInfo: nil, repeats: true)
+        databaseRef = Database.database().reference()
+        //情報を取得したいユーザーの更新を取得する
+        databaseRef.child("user/"+String(pairID)).observe(.value, with: { snapshot in
+            if let snapshotValue = snapshot.value as? [String:Any],
+                let name = snapshotValue["uid"] as? String,
+                let pulse = snapshotValue["pulse"] as? String {
+                if name == String(self.pairID) {
+                    self.pulseLabel.text = pulse + "T"
+                }
+            }
+        })
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateHeartRate), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,11 +92,15 @@ class sensingViewController: UIViewController{
                 case .success(let value):
                     let json = JSON(value)
                     let data = self.getParamData(json)
-                    let root = "user/"+(data["uid"] as! String)
+                    let root = "user/"+String(data["uid"] as! Int)
                     print(data)
                     self.databaseRef.child(root).setValue(data)
-                    //self.post(data)
-                    
+                    if self.postArray.count == 10 {
+                        let postData: Parameters = ["parentKey": self.postArray,
+                                                    "mode": "insert"]
+                        //self.post(postData)
+                        self.postArray.removeAll()
+                    }
                 case .failure(let error):
                     print(error)
                 }
@@ -108,7 +114,7 @@ class sensingViewController: UIViewController{
         format.dateFormat = "yyyy-MM-dd-HH-mm-ss"
         let strDate = format.string(from: Date())
         
-        let data: [String : Any] = ["uid": "ユーザー1","time": strDate, "latitude":  100, "longitude": 100, "pulse": json["heartRate"].stringValue] as [String : Any]
+        let data: [String : Any] = ["uid": myID,"time": strDate, "latitude":  100, "longitude": 100, "pulse": json["heartRate"].stringValue] as [String : Any]
         
         return data
 
