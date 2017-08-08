@@ -28,6 +28,7 @@
 		BF0BD5821F39D3AB001945C8 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BD5811F39D3AB001945C8 /* ExamplesDefaults.swift */; };
 		BF0BD5841F39D3C9001945C8 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BD5831F39D3C9001945C8 /* Env.swift */; };
 		BF0BD5861F39D3E3001945C8 /* RangedAxisExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BD5851F39D3E3001945C8 /* RangedAxisExample.swift */; };
+		BF10842C1F39FBA10039570B /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10842B1F39FBA10039570B /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		BF0BD5811F39D3AB001945C8 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		BF0BD5831F39D3C9001945C8 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		BF0BD5851F39D3E3001945C8 /* RangedAxisExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangedAxisExample.swift; sourceTree = "<group>"; };
+		BF10842B1F39FBA10039570B /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		C5C42EEAA48226592D9EE91B /* Pods-20170808hack-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-iosUITests/Pods-20170808hack-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F451EAF1D4395232E2C6D6E4 /* Pods-20170808hack-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-iosTests/Pods-20170808hack-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 				BF0BD5831F39D3C9001945C8 /* Env.swift */,
 				BF0BD5851F39D3E3001945C8 /* RangedAxisExample.swift */,
 				BF0BD5661F39A3BF001945C8 /* collectionViewController.swift */,
+				BF10842B1F39FBA10039570B /* detailViewController.swift */,
 				BF0BD57F1F39D32C001945C8 /* sensingViewController.swift */,
 				BF0BD53B1F398C23001945C8 /* Assets.xcassets */,
 				BF0BD53D1F398C23001945C8 /* LaunchScreen.storyboard */,
@@ -509,6 +512,7 @@
 				BF0BD5841F39D3C9001945C8 /* Env.swift in Sources */,
 				BF0BD5351F398C23001945C8 /* AppDelegate.swift in Sources */,
 				BF0BD5671F39A3BF001945C8 /* collectionViewController.swift in Sources */,
+				BF10842C1F39FBA10039570B /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

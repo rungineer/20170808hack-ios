@@ -8,13 +8,14 @@
 
 import UIKit
 
+var selectedImage: UIImage?
+
 class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
     // サムネイル画像のタイトル
-    let photos = ["rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg"]
+    let photos = ["rittu.jpg","1","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg"]
 
-    let cellMargin: CGFloat = 1.0
-    var selectedImage: UIImage?
+    let cellMargin: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,7 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
     // Screenサイズに応じたセルサイズを返す
     // UICollectionViewDelegateFlowLayoutの設定が必要
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize:CGFloat = self.view.frame.size.width/2-2
+        let cellSize:CGFloat = self.view.frame.size.width/2
         // 正方形で返すためにwidth,heightを同じにする
         return CGSize(width: cellSize, height: cellSize)
     }
@@ -56,10 +57,10 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
         
         // [indexPath.row] から画像名を探し、UImage を設定
         selectedImage = UIImage(named: photos[(indexPath as NSIndexPath).row])
-        if selectedImage != nil {
-            // SubViewController へ遷移するために Segue を呼び出す
-            performSegue(withIdentifier: "toSubViewController",sender: nil)
-        }
+//        if selectedImage != nil {
+//            // SubViewController へ遷移するために Segue を呼び出す
+//            performSegue(withIdentifier: "toSubViewController",sender: nil)
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
