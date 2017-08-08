@@ -22,9 +22,9 @@ class sensingViewController: UIViewController{
     var timer: Timer!
     var alphaTimer: Timer!
     var databaseRef:DatabaseReference!
-    var postArray = [String: Any]()
-    let myID = 2
-    let pairID = 1
+    var postArray = [Any]()
+    let myID = 1
+    let pairID = 2
     var pulseArray = [Int]()
     fileprivate var alpha: CGFloat = 1
     
@@ -72,9 +72,9 @@ class sensingViewController: UIViewController{
         databaseRef.child("user/"+String(pairID)).observe(.value, with: { snapshot in
             if let snapshotValue = snapshot.value as? [String:Any],
                 let id = snapshotValue["uid"] as? Int,
-                let pulse = snapshotValue["pulse"] as? String {
+                let pulse = snapshotValue["pulse"] as? Int {
                 if id == self.pairID {
-                    self.updatePartnerInfo(pulse: Int(pulse)!)
+                    self.updatePartnerInfo(pulse: pulse)
                 }
             }
         })
@@ -97,6 +97,7 @@ class sensingViewController: UIViewController{
                 case .success(let value):
                     let json = JSON(value)
                     let data = self.getParamData(json)
+                    self.postArray.append(data)
                     let root = "user/"+String(data["uid"] as! Int)
                     print(data)
                     self.databaseRef.child(root).setValue(data)
@@ -119,18 +120,18 @@ class sensingViewController: UIViewController{
         format.dateFormat = "yyyy-MM-dd-HH-mm-ss"
         let strDate = format.string(from: Date())
         
-        let data: [String : Any] = ["uid": myID,"time": strDate, "latitude":  100, "longitude": 100, "pulse": json["heartRate"].stringValue] as [String : Any]
+        let data: [String : Any] = ["uid": myID,"time": strDate, "latitude":  100, "longitude": 100, "pulse": json["heartRate"].intValue] as [String : Any]
         
         return data
         
     }
     
     func post(_ data: [String : Any]) {
-        let tamuraURL = "http://masayuki.nkmr.io/docomo/"
+        let tamuraURL = "http://masayuki.nkmr.io/docomo/index3.php"
         let headers = ["Content-Type": "application/json"]
         
         //ここで配列でためって一気に送信数する
-        Alamofire.request(tamuraURL, method: .post, parameters: data, headers: headers)
+        Alamofire.request(tamuraURL, method: .post, parameters: data, encoding: JSONEncoding.default, headers: headers)
             .response(completionHandler: { response in
                 if let error = response.error {
                     print(error.localizedDescription)
