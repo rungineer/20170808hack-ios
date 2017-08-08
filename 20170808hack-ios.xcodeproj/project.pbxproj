@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F7BBEAD345D56929900EDAC /* Pods_20170808hack_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882AC085544AE76D39D88BBF /* Pods_20170808hack_iosTests.framework */; };
+		3139D1931F39F18200189BDB /* System1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139D1921F39F18200189BDB /* System1.storyboard */; };
 		494A75B81924F3BE84BE69E5 /* Pods_20170808hack_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 826ED81D029902DAE3555DC1 /* Pods_20170808hack_ios.framework */; };
 		5E9A5E5A9053ABFCE27724DA /* Pods_20170808hack_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F63AC72EEEEEA492210B3F3 /* Pods_20170808hack_iosUITests.framework */; };
 		BF0BD5351F398C23001945C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BD5341F398C23001945C8 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0A8765B898307C37FAFDF867 /* Pods-20170808hack-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-iosTests/Pods-20170808hack-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F63AC72EEEEEA492210B3F3 /* Pods_20170808hack_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_20170808hack_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3139D1921F39F18200189BDB /* System1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = System1.storyboard; sourceTree = "<group>"; };
 		4121ABE30F9BE69BE1E443D0 /* Pods-20170808hack-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-ios/Pods-20170808hack-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		584ED8C4F731FB2DBC46F050 /* Pods-20170808hack-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-iosUITests/Pods-20170808hack-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A0B29DF6778C1E59BD7EEC5 /* Pods-20170808hack-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-ios/Pods-20170808hack-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				BF0BD53B1F398C23001945C8 /* Assets.xcassets */,
 				BF0BD53D1F398C23001945C8 /* LaunchScreen.storyboard */,
 				BF0BD5401F398C23001945C8 /* Info.plist */,
+				3139D1921F39F18200189BDB /* System1.storyboard */,
 			);
 			path = "20170808hack-ios";
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				BF0BD57C1F39D1F1001945C8 /* rittu.jpg in Resources */,
 				BF0BD53F1F398C23001945C8 /* LaunchScreen.storyboard in Resources */,
 				BF0BD5751F39D155001945C8 /* 1.png in Resources */,
+				3139D1931F39F18200189BDB /* System1.storyboard in Resources */,
 				BF0BD5761F39D155001945C8 /* 2.png in Resources */,
 				BF0BD5771F39D155001945C8 /* 3.png in Resources */,
 				BF0BD57D1F39D1F1001945C8 /* 六本木の夜景.jpg in Resources */,
