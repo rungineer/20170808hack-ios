@@ -130,11 +130,11 @@
             </objects>
             <point key="canvasLocation" x="728.79999999999995" y="-139.880059970015"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--パートナー-->
         <scene sceneID="WTo-nz-h3E">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kK6-n4-vE4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="lbB-2J-UHF"/>
+                    <tabBarItem key="tabBarItem" title="パートナー" image="tab_icon2.png" id="lbB-2J-UHF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="33d-Ea-PGc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -305,7 +305,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="aWr-ho-Bvi"/>
                     <navigationItem key="navigationItem" title="パートナーの状態" id="qPu-rh-Gfp">
-                        <barButtonItem key="rightBarButtonItem" title="設定" id="mgW-nn-UqH">
+                        <barButtonItem key="rightBarButtonItem" image="setting.png" id="mgW-nn-UqH">
                             <connections>
                                 <segue destination="Ok6-A7-Ven" kind="show" id="j8Z-nn-MTL"/>
                             </connections>
@@ -321,4 +321,8 @@
             <point key="canvasLocation" x="-127" y="-141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="setting.png" width="33" height="33"/>
+        <image name="tab_icon2.png" width="31" height="31"/>
+    </resources>
 </document>

@@ -124,10 +124,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3NO-f2-tgC">
-                                <rect key="frame" x="111" y="443" width="153" height="93"/>
+                                <rect key="frame" x="111" y="443" width="153" height="142"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5f-U4-Ydz">
-                                <rect key="frame" x="167" y="560" width="42" height="21"/>
+                                <rect key="frame" x="167" y="609" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -169,7 +169,7 @@
         <scene sceneID="pi7-Ur-VL1">
             <objects>
                 <viewControllerPlaceholder storyboardName="System1" id="9JA-iv-OF7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="apV-d6-Rot"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="tab_icon2.png" id="apV-d6-Rot"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRN-hg-XAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,11 +193,11 @@
             </objects>
             <point key="canvasLocation" x="890" y="137"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--デートスポット-->
         <scene sceneID="ese-Ic-5Xg">
             <objects>
                 <navigationController id="yxh-Fp-C4d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="rkX-FP-Tb9"/>
+                    <tabBarItem key="tabBarItem" title="デートスポット" image="tab_icon1.png" id="rkX-FP-Tb9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zs-Gi-Vqy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -302,7 +302,7 @@
                             <constraint firstItem="gDs-og-GoA" firstAttribute="trailing" secondItem="j3d-bN-KfR" secondAttribute="trailing" id="o5o-TU-V8M"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="RD6-n3-Cg1"/>
+                    <tabBarItem key="tabBarItem" title="デートスポット" image="tab_icon1.png" id="RD6-n3-Cg1"/>
                     <navigationItem key="navigationItem" title="ホットなスポット" id="0br-1t-OVr"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="9ts-1h-li2" id="T1b-wo-WsT"/>
@@ -395,6 +395,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tab_icon1.png" width="22" height="31"/>
+        <image name="tab_icon2.png" width="31" height="31"/>
         <image name="アイコン.png" width="741" height="529"/>
     </resources>
 </document>

@@ -10,6 +10,10 @@
 		2F7BBEAD345D56929900EDAC /* Pods_20170808hack_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882AC085544AE76D39D88BBF /* Pods_20170808hack_iosTests.framework */; };
 		3139D1931F39F18200189BDB /* System1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139D1921F39F18200189BDB /* System1.storyboard */; };
 		3139D1951F3A1E7400189BDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3139D1941F3A1E7400189BDB /* GoogleService-Info.plist */; };
+		3170666D1F3A3789002599B3 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3170666C1F3A3789002599B3 /* icon.png */; };
+		317066731F3A38A9002599B3 /* tab_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 317066721F3A38A9002599B3 /* tab_icon2.png */; };
+		317066751F3A39F3002599B3 /* tab_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 317066741F3A39F3002599B3 /* tab_icon1.png */; };
+		317066791F3A3C49002599B3 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 317066781F3A3C49002599B3 /* setting.png */; };
 		494A75B81924F3BE84BE69E5 /* Pods_20170808hack_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 826ED81D029902DAE3555DC1 /* Pods_20170808hack_ios.framework */; };
 		5E9A5E5A9053ABFCE27724DA /* Pods_20170808hack_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F63AC72EEEEEA492210B3F3 /* Pods_20170808hack_iosUITests.framework */; };
 		BF0BD5351F398C23001945C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BD5341F398C23001945C8 /* AppDelegate.swift */; };
@@ -68,6 +72,10 @@
 		2F63AC72EEEEEA492210B3F3 /* Pods_20170808hack_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_20170808hack_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3139D1921F39F18200189BDB /* System1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = System1.storyboard; sourceTree = "<group>"; };
 		3139D1941F3A1E7400189BDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3170666C1F3A3789002599B3 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		317066721F3A38A9002599B3 /* tab_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon2.png; sourceTree = "<group>"; };
+		317066741F3A39F3002599B3 /* tab_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon1.png; sourceTree = "<group>"; };
+		317066781F3A3C49002599B3 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		4121ABE30F9BE69BE1E443D0 /* Pods-20170808hack-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-ios/Pods-20170808hack-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		584ED8C4F731FB2DBC46F050 /* Pods-20170808hack-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-iosUITests/Pods-20170808hack-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A0B29DF6778C1E59BD7EEC5 /* Pods-20170808hack-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-ios/Pods-20170808hack-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +199,7 @@
 		BF0BD5331F398C23001945C8 /* 20170808hack-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3170666C1F3A3789002599B3 /* icon.png */,
 				3139D1941F3A1E7400189BDB /* GoogleService-Info.plist */,
 				BF0BD57E1F39D20C001945C8 /* img */,
 				BF0BD5791F39D165001945C8 /* material */,
@@ -243,7 +252,10 @@
 		BF0BD57E1F39D20C001945C8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				317066781F3A3C49002599B3 /* setting.png */,
+				317066741F3A39F3002599B3 /* tab_icon1.png */,
 				BF0BD57A1F39D1F1001945C8 /* rittu.jpg */,
+				317066721F3A38A9002599B3 /* tab_icon2.png */,
 				BF0BD57B1F39D1F1001945C8 /* 六本木の夜景.jpg */,
 				BF10842D1F3A26B60039570B /* LaQua.jpg */,
 				BF10842E1F3A26B60039570B /* すみだ水族館.jpg */,
@@ -385,8 +397,10 @@
 				BF0BD57C1F39D1F1001945C8 /* rittu.jpg in Resources */,
 				BF10843E1F3A26B60039570B /* 代々木公園.jpg in Resources */,
 				BF10843F1F3A26B60039570B /* 六本木ヒルズ.jpg in Resources */,
+				317066751F3A39F3002599B3 /* tab_icon1.png in Resources */,
 				BF10843B1F3A26B60039570B /* すみだ水族館.jpg in Resources */,
 				BF1084461F3A26B60039570B /* 表参道.jpg in Resources */,
+				317066791F3A3C49002599B3 /* setting.png in Resources */,
 				BF1084421F3A26B60039570B /* 東京ミッドタウン.jpg in Resources */,
 				BF0BD53F1F398C23001945C8 /* LaunchScreen.storyboard in Resources */,
 				BF1084401F3A26B60039570B /* 日比谷公園.jpg in Resources */,
@@ -400,9 +414,11 @@
 				BF1084451F3A26B60039570B /* 花やしき.jpg in Resources */,
 				BF10843D1F3A26B60039570B /* 上野動物園.jpg in Resources */,
 				BF10843C1F3A26B60039570B /* とよしまえん.jpg in Resources */,
+				3170666D1F3A3789002599B3 /* icon.png in Resources */,
 				BF0BD53A1F398C23001945C8 /* Main.storyboard in Resources */,
 				3139D1951F3A1E7400189BDB /* GoogleService-Info.plist in Resources */,
 				BF0BD5781F39D155001945C8 /* アイコン.png in Resources */,
+				317066731F3A38A9002599B3 /* tab_icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
