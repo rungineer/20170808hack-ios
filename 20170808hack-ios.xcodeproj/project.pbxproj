@@ -29,6 +29,19 @@
 		BF0BD5841F39D3C9001945C8 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BD5831F39D3C9001945C8 /* Env.swift */; };
 		BF0BD5861F39D3E3001945C8 /* RangedAxisExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BD5851F39D3E3001945C8 /* RangedAxisExample.swift */; };
 		BF10842C1F39FBA10039570B /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10842B1F39FBA10039570B /* detailViewController.swift */; };
+		BF10843A1F3A26B60039570B /* LaQua.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF10842D1F3A26B60039570B /* LaQua.jpg */; };
+		BF10843B1F3A26B60039570B /* すみだ水族館.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF10842E1F3A26B60039570B /* すみだ水族館.jpg */; };
+		BF10843C1F3A26B60039570B /* とよしまえん.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF10842F1F3A26B60039570B /* とよしまえん.jpg */; };
+		BF10843D1F3A26B60039570B /* 上野動物園.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084301F3A26B60039570B /* 上野動物園.jpg */; };
+		BF10843E1F3A26B60039570B /* 代々木公園.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084311F3A26B60039570B /* 代々木公園.jpg */; };
+		BF10843F1F3A26B60039570B /* 六本木ヒルズ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084321F3A26B60039570B /* 六本木ヒルズ.jpg */; };
+		BF1084401F3A26B60039570B /* 日比谷公園.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084331F3A26B60039570B /* 日比谷公園.jpg */; };
+		BF1084411F3A26B60039570B /* 東京スカイツリー.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084341F3A26B60039570B /* 東京スカイツリー.jpg */; };
+		BF1084421F3A26B60039570B /* 東京ミッドタウン.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084351F3A26B60039570B /* 東京ミッドタウン.jpg */; };
+		BF1084431F3A26B60039570B /* 東京都庁展望室.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084361F3A26B60039570B /* 東京都庁展望室.jpg */; };
+		BF1084441F3A26B60039570B /* 浜離宮恩賜庭園.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084371F3A26B60039570B /* 浜離宮恩賜庭園.jpg */; };
+		BF1084451F3A26B60039570B /* 花やしき.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084381F3A26B60039570B /* 花やしき.jpg */; };
+		BF1084461F3A26B60039570B /* 表参道.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1084391F3A26B60039570B /* 表参道.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +94,19 @@
 		BF0BD5831F39D3C9001945C8 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		BF0BD5851F39D3E3001945C8 /* RangedAxisExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangedAxisExample.swift; sourceTree = "<group>"; };
 		BF10842B1F39FBA10039570B /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		BF10842D1F3A26B60039570B /* LaQua.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaQua.jpg; sourceTree = "<group>"; };
+		BF10842E1F3A26B60039570B /* すみだ水族館.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "すみだ水族館.jpg"; sourceTree = "<group>"; };
+		BF10842F1F3A26B60039570B /* とよしまえん.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "とよしまえん.jpg"; sourceTree = "<group>"; };
+		BF1084301F3A26B60039570B /* 上野動物園.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "上野動物園.jpg"; sourceTree = "<group>"; };
+		BF1084311F3A26B60039570B /* 代々木公園.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "代々木公園.jpg"; sourceTree = "<group>"; };
+		BF1084321F3A26B60039570B /* 六本木ヒルズ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "六本木ヒルズ.jpg"; sourceTree = "<group>"; };
+		BF1084331F3A26B60039570B /* 日比谷公園.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "日比谷公園.jpg"; sourceTree = "<group>"; };
+		BF1084341F3A26B60039570B /* 東京スカイツリー.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "東京スカイツリー.jpg"; sourceTree = "<group>"; };
+		BF1084351F3A26B60039570B /* 東京ミッドタウン.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "東京ミッドタウン.jpg"; sourceTree = "<group>"; };
+		BF1084361F3A26B60039570B /* 東京都庁展望室.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "東京都庁展望室.jpg"; sourceTree = "<group>"; };
+		BF1084371F3A26B60039570B /* 浜離宮恩賜庭園.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浜離宮恩賜庭園.jpg"; sourceTree = "<group>"; };
+		BF1084381F3A26B60039570B /* 花やしき.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "花やしき.jpg"; sourceTree = "<group>"; };
+		BF1084391F3A26B60039570B /* 表参道.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "表参道.jpg"; sourceTree = "<group>"; };
 		C5C42EEAA48226592D9EE91B /* Pods-20170808hack-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-iosUITests/Pods-20170808hack-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F451EAF1D4395232E2C6D6E4 /* Pods-20170808hack-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20170808hack-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-20170808hack-iosTests/Pods-20170808hack-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +239,19 @@
 			children = (
 				BF0BD57A1F39D1F1001945C8 /* rittu.jpg */,
 				BF0BD57B1F39D1F1001945C8 /* 六本木の夜景.jpg */,
+				BF10842D1F3A26B60039570B /* LaQua.jpg */,
+				BF10842E1F3A26B60039570B /* すみだ水族館.jpg */,
+				BF10842F1F3A26B60039570B /* とよしまえん.jpg */,
+				BF1084301F3A26B60039570B /* 上野動物園.jpg */,
+				BF1084311F3A26B60039570B /* 代々木公園.jpg */,
+				BF1084321F3A26B60039570B /* 六本木ヒルズ.jpg */,
+				BF1084331F3A26B60039570B /* 日比谷公園.jpg */,
+				BF1084341F3A26B60039570B /* 東京スカイツリー.jpg */,
+				BF1084351F3A26B60039570B /* 東京ミッドタウン.jpg */,
+				BF1084361F3A26B60039570B /* 東京都庁展望室.jpg */,
+				BF1084371F3A26B60039570B /* 浜離宮恩賜庭園.jpg */,
+				BF1084381F3A26B60039570B /* 花やしき.jpg */,
+				BF1084391F3A26B60039570B /* 表参道.jpg */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -334,13 +373,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF10843A1F3A26B60039570B /* LaQua.jpg in Resources */,
+				BF1084411F3A26B60039570B /* 東京スカイツリー.jpg in Resources */,
+				BF1084441F3A26B60039570B /* 浜離宮恩賜庭園.jpg in Resources */,
 				BF0BD57C1F39D1F1001945C8 /* rittu.jpg in Resources */,
+				BF10843E1F3A26B60039570B /* 代々木公園.jpg in Resources */,
+				BF10843F1F3A26B60039570B /* 六本木ヒルズ.jpg in Resources */,
+				BF10843B1F3A26B60039570B /* すみだ水族館.jpg in Resources */,
+				BF1084461F3A26B60039570B /* 表参道.jpg in Resources */,
+				BF1084421F3A26B60039570B /* 東京ミッドタウン.jpg in Resources */,
 				BF0BD53F1F398C23001945C8 /* LaunchScreen.storyboard in Resources */,
+				BF1084401F3A26B60039570B /* 日比谷公園.jpg in Resources */,
 				BF0BD5751F39D155001945C8 /* 1.png in Resources */,
 				BF0BD5761F39D155001945C8 /* 2.png in Resources */,
+				BF1084431F3A26B60039570B /* 東京都庁展望室.jpg in Resources */,
 				BF0BD5771F39D155001945C8 /* 3.png in Resources */,
 				BF0BD57D1F39D1F1001945C8 /* 六本木の夜景.jpg in Resources */,
 				BF0BD53C1F398C23001945C8 /* Assets.xcassets in Resources */,
+				BF1084451F3A26B60039570B /* 花やしき.jpg in Resources */,
+				BF10843D1F3A26B60039570B /* 上野動物園.jpg in Resources */,
+				BF10843C1F3A26B60039570B /* とよしまえん.jpg in Resources */,
 				BF0BD53A1F398C23001945C8 /* Main.storyboard in Resources */,
 				BF0BD5781F39D155001945C8 /* アイコン.png in Resources */,
 			);

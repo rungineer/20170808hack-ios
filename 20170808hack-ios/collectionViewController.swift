@@ -14,7 +14,7 @@ var selectedText: String?
 class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
     // サムネイル画像のタイトル
-    let photos = ["rittu.jpg","六本木の夜景.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg"]
+    let photos = ["rittu.jpg","六本木の夜景.jpg","LaQua.jpg","すみだ水族館.jpg","とよしまえん.jpg","上野動物園.jpg","代々木公園.jpg","六本木ヒルズ.jpg","日比谷公園.jpg","東京スカイツリー.jpg", "東京ミッドタウン.jpg", "東京都庁展望室.jpg", "浜離宮恩賜庭園.jpg", "花やしき.jpg", "表参道.jpg"]
 
     let cellMargin: CGFloat = 0
     
@@ -72,7 +72,7 @@ class collectionViewController: UIViewController ,UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 要素数を入れる、要素以上の数字を入れると表示でエラーとなる
-        return 10;
+        return 15;
     }
     
     //セルの垂直方向のマージンを設定
