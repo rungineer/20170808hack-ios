@@ -123,20 +123,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3NO-f2-tgC">
+                                <rect key="frame" x="111" y="443" width="153" height="93"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5f-U4-Ydz">
                                 <rect key="frame" x="167" y="560" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3NO-f2-tgC">
-                                <rect key="frame" x="111" y="443" width="153" height="93"/>
-                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ung-af-lRg">
+                                <rect key="frame" x="1" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="kdO-Uv-brJ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="パートナーの状態" id="hUt-iy-aXJ"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ung-af-lRg" firstAttribute="centerX" secondItem="X5f-U4-Ydz" secondAttribute="centerX" id="HCh-RI-8cf"/>
+                            <constraint firstItem="ung-af-lRg" firstAttribute="top" secondItem="srX-sA-Bts" secondAttribute="top" id="IhN-fH-76b"/>
                             <constraint firstItem="3NO-f2-tgC" firstAttribute="centerX" secondItem="srX-sA-Bts" secondAttribute="centerX" id="WgQ-mL-XmB"/>
                             <constraint firstItem="QNc-fM-te4" firstAttribute="top" secondItem="X5f-U4-Ydz" secondAttribute="bottom" constant="37" id="a7h-bY-bhf"/>
+                            <constraint firstItem="ung-af-lRg" firstAttribute="leading" secondItem="srX-sA-Bts" secondAttribute="leadingMargin" constant="-15" id="buY-hd-Gqb"/>
                             <constraint firstItem="X5f-U4-Ydz" firstAttribute="top" secondItem="3NO-f2-tgC" secondAttribute="bottom" constant="24" id="eW8-sb-NoW"/>
                             <constraint firstItem="3NO-f2-tgC" firstAttribute="leading" secondItem="srX-sA-Bts" secondAttribute="leadingMargin" constant="95" id="mnM-B9-eJd"/>
                             <constraint firstItem="X5f-U4-Ydz" firstAttribute="centerX" secondItem="srX-sA-Bts" secondAttribute="centerX" id="vNc-ln-Qvu"/>
@@ -200,8 +212,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-9w-8oS">
-                                <rect key="frame" x="0.0" y="69" width="375" height="549"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-9w-8oS">
+                                <rect key="frame" x="0.0" y="98" width="375" height="549"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5eY-1h-VNH">
                                     <size key="itemSize" width="182" height="165"/>
@@ -261,22 +273,40 @@
                                     <navigationItem title="今ホットな場所" id="4hC-Df-K61"/>
                                 </items>
                             </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gDs-og-GoA">
+                                <rect key="frame" x="0.0" y="69" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ee7-9w-8oS" firstAttribute="bottom" secondItem="NGn-RN-ZUI" secondAttribute="top" id="4kX-Gk-HY2"/>
+                            <constraint firstItem="gDs-og-GoA" firstAttribute="top" secondItem="6VL-IO-7O3" secondAttribute="bottom" constant="5" id="6ld-KS-vAm"/>
                             <constraint firstAttribute="trailing" secondItem="ee7-9w-8oS" secondAttribute="trailing" id="CHi-uA-Rka"/>
+                            <constraint firstItem="gDs-og-GoA" firstAttribute="leading" secondItem="j3d-bN-KfR" secondAttribute="leading" id="Do5-zY-lbK"/>
                             <constraint firstItem="ee7-9w-8oS" firstAttribute="leading" secondItem="j3d-bN-KfR" secondAttribute="leading" id="JRG-nT-41S"/>
                             <constraint firstItem="ee7-9w-8oS" firstAttribute="leading" secondItem="Qf5-an-VQG" secondAttribute="leading" id="T4T-dl-hDK"/>
                             <constraint firstItem="ee7-9w-8oS" firstAttribute="trailing" secondItem="j3d-bN-KfR" secondAttribute="trailing" id="dTG-OX-BBr"/>
                             <constraint firstItem="j3d-bN-KfR" firstAttribute="top" secondItem="Qf5-an-VQG" secondAttribute="top" id="fIL-wI-GLp"/>
                             <constraint firstItem="ee7-9w-8oS" firstAttribute="top" secondItem="j3d-bN-KfR" secondAttribute="bottom" constant="19" id="hTc-yZ-BbL"/>
+                            <constraint firstItem="gDs-og-GoA" firstAttribute="trailing" secondItem="j3d-bN-KfR" secondAttribute="trailing" id="o5o-TU-V8M"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="RD6-n3-Cg1"/>
                     <navigationItem key="navigationItem" title="ホットなスポット" id="0br-1t-OVr"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="9ts-1h-li2" id="T1b-wo-WsT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chU-Zr-ZXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="9ts-1h-li2">
+                    <connections>
+                        <outlet property="delegate" destination="btv-rC-XLA" id="LKQ-de-qVm"/>
+                        <outlet property="searchContentsController" destination="btv-rC-XLA" id="ByD-vM-VbB"/>
+                        <outlet property="searchResultsDataSource" destination="btv-rC-XLA" id="Hga-8H-qGa"/>
+                        <outlet property="searchResultsDelegate" destination="btv-rC-XLA" id="HuS-tc-UxC"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2597.5999999999999" y="-313.49325337331339"/>
         </scene>

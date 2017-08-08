@@ -25,35 +25,41 @@ class sensingViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let frame = CGRect(x: 5, y: 30, width: self.view.frame.width - 10, height: self.view.frame.height/2 - 30)
+
+        // 画像
+        let image1:UIImage = UIImage(named:"1.png")!//絶好調
+        let image2:UIImage = UIImage(named:"2.png")!//ビミョー
+        //        let image3:UIImage = UIImage(named:"3.png")!//にこにこ
+
+        var text1 :UILabel!
+        text1 = UILabel(frame: CGRect(x: 0, y: 60, width: self.view.bounds.width, height: 30))
+        text1.text = "1 day"
+        text1.font = UIFont(name: "HiraKakuProN-W3", size: 16)
+        text1.textAlignment = NSTextAlignment.center
+        text1.textColor = UIColor.black
+        self.view.addSubview(text1!)
+
+        let frame = CGRect(x: 5, y: 90, width: self.view.frame.width - 10, height: self.view.frame.height/2 - 50)
         let rangedAxisExample = RangedAxisExample(frame: frame)
         rangedAxisExample.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 10)
         self.view.addSubview(rangedAxisExample)
         
-        // 画像
-        let image1:UIImage = UIImage(named:"1.png")!//絶好調
-        let image2:UIImage = UIImage(named:"2.png")!//ニコニコ
-        //        let image3:UIImage = UIImage(named:"3.png")!//ビミョー
-
-        //yourdata..お相手の情報
+        //
         var text2 :UILabel!
-        text2 = UILabel(frame: CGRect(x: self.view.frame.width/2-40, y: self.view.frame.height/2 + 30, width: self.view.bounds.width, height: 30))
-        text2.text = "今の状態"
-        text2.font = UIFont(name: "HiraKakuProN-W3", size: 20)
-        text2.textAlignment = NSTextAlignment.left
+        text2 = UILabel(frame: CGRect(x: 0, y: self.view.frame.height/2 + 60, width: self.view.bounds.width, height: 30))
+        text2.text = "Now"
+        text2.font = UIFont(name: "HiraKakuProN-W3", size: 16)
+        text2.textAlignment = NSTextAlignment.center
         text2.textColor = UIColor.black
         self.view.addSubview(text2!)
 
         partnerImage.image = image2
         self.view.addSubview(partnerImage!)
-
         pulseLabel.text = "80T"
         pulseLabel.font = UIFont(name: "HiraKakuProN-W3", size: 28)
         pulseLabel.textAlignment = NSTextAlignment.left
         pulseLabel.textColor = UIColor.black
         self.view.addSubview(pulseLabel!)
-        
         
         //firebase
 //        databaseRef = Database.database().reference()

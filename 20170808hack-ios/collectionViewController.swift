@@ -13,7 +13,7 @@ var selectedImage: UIImage?
 class collectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
     // サムネイル画像のタイトル
-    let photos = ["rittu.jpg","1","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg"]
+    let photos = ["rittu.jpg","六本木の夜景.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg","rittu.jpg"]
 
     let cellMargin: CGFloat = 0
     
